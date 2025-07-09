@@ -8,9 +8,11 @@ document.getElementById("genderBtn").addEventListener("click", () => {
   for (let i = 1; i <= 3; i++) {
     const el = document.getElementById(`text${i}`);
     let txt = el.textContent;
+
     Object.keys(replacements).forEach(key => {
       txt = txt.replaceAll(key, replacements[key]);
     });
+
     el.textContent = txt;
   }
 
