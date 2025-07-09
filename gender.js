@@ -9,8 +9,7 @@ document.getElementById("genderBtn").addEventListener("click", () => {
     const el = document.getElementById(`text${i}`);
     let txt = el.textContent;
     Object.keys(replacements).forEach(key => {
-      const regex = new RegExp(`\\b${key}\\b`, "g");
-      txt = txt.replace(regex, replacements[key]);
+      txt = txt.replaceAll(key, replacements[key]);
     });
     el.textContent = txt;
   }
