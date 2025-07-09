@@ -16,5 +16,8 @@ document.getElementById("genderBtn").addEventListener("click", () => {
     el.textContent = txt;
   }
 
-  alert("Texte wurden erfolgreich gegendert.");
+  // Jetzt mit kleinem Trick etwas warten, damit Browser den DOM aktualisiert:
+  setTimeout(() => {
+    alert("Texte wurden erfolgreich gegendert.");
+  }, 10);
 });
