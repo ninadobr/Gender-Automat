@@ -1,8 +1,14 @@
 document.getElementById("genderBtn").addEventListener("click", () => {
   const replacements = {
-    "Programmierer": "Programmierer:innen",
-    "Ingenieur": "Ingenieur:innen",
-    "Student": "Student:innen"
+    "Benutzer": "Benutzer:innen",
+    "Administratoren": "Administrator:innen",
+    "Anwender": "Anwender:innen",
+    "Techniker": "Techniker:innen",
+    "Monteure": "Monteure:innen",
+    "Prüfer": "Prüfer:innen",
+    "Redakteure": "Redakteur:innen",
+    "Dokumentationsspezialisten": "Dokumentationsspezialist:innen",
+    "Projektleiter": "Projektleiter:innen"
   };
 
   for (let i = 1; i <= 3; i++) {
@@ -16,7 +22,6 @@ document.getElementById("genderBtn").addEventListener("click", () => {
     el.textContent = txt;
   }
 
-  // Jetzt mit kleinem Trick etwas warten, damit Browser den DOM aktualisiert:
   setTimeout(() => {
     alert("Texte wurden erfolgreich gegendert.");
   }, 10);
