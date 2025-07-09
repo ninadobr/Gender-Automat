@@ -7,8 +7,13 @@ body {
 header {
   background-color: #3366cc;
   color: white;
-  padding: 10px;
   text-align: center;
+  padding: 20px;
+}
+
+header img {
+  display: block;
+  margin: 10px auto;
 }
 
 nav {
@@ -21,18 +26,23 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: flex-start; /* Standard: links */
   gap: 10px;
 }
 
-nav ul li {
-  display: inline;
+nav li {
+  margin: 0;
 }
 
 main {
-  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  line-height: 1.6;
 }
 
-button {
+h2 {
+  color: #3366cc;
   margin-top: 20px;
 }
 
@@ -44,8 +54,29 @@ footer {
   margin-top: 20px;
 }
 
+/* RTL: Navigation rechts */
+body[dir="rtl"] nav ul {
+  justify-content: flex-end;
+}
+
+/* Media Query: für schmale Bildschirme */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 0 10px;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 }
