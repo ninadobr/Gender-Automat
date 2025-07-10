@@ -2,13 +2,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header {
-  background-color: #3366cc;
-  color: white;
+  background-color: #0c0c3d; /* Marineblau */
+  color: #fff;
   text-align: center;
   padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header img {
@@ -26,12 +29,18 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: flex-start; /* Standard: links */
-  gap: 10px;
+  justify-content: center;
+  gap: 40px;
 }
 
-nav li {
-  margin: 0;
+nav li a {
+  color: #3fc5f0; /* hellblau */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -42,16 +51,32 @@ main {
 }
 
 h2 {
-  color: #3366cc;
+  color: #3fc5f0; /* hellblau */
   margin-top: 20px;
 }
 
+button#genderBtn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #3fc5f0; /* hellblau */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#genderBtn:hover {
+  background-color: #5fd4f6; /* noch heller */
+}
+
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #0c0c3d; /* Marineblau */
+  color: #fff;
   text-align: center;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 /* RTL: Navigation rechts */
