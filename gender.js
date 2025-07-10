@@ -22,7 +22,12 @@ document.getElementById("genderBtn").addEventListener("click", () => {
     el.textContent = txt;
   }
 
-  setTimeout(() => {
-    alert("Texte wurden erfolgreich gegendert.");
-  }, 10);
+  // Feedback-Meldung auf der Seite statt alert()
+  const feedback = document.getElementById("feedback");
+  if (feedback) {
+    feedback.textContent = "Texte wurden erfolgreich gegendert.";
+    feedback.style.color = "green";
+    feedback.style.fontWeight = "bold";
+  }
 });
+
